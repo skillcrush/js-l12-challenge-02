@@ -22,6 +22,7 @@ const displayImage = function (randomImage) {
   const imageAddress = randomImage.download_url;
   authorSpan.innerText = author;
   img.src = imageAddress;
+  img.alt = `Image by ${author}`;
   imgDiv.classList.remove("hide");
 };
 

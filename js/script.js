@@ -13,16 +13,17 @@ const selectRandomImage = function (images) {
   const randomIndex = Math.floor(Math.random() * images.length);
   // console.log(randomIndex);
   const randomImage = images[randomIndex];
-  // console.log(randomImage);
+  console.log(randomImage);
   displayImage(randomImage);
 };
 
 const displayImage = function (randomImage) {
   const author = randomImage.author;
   const imageAddress = randomImage.download_url;
+  const imageUrl = randomImage.url;
   authorSpan.innerText = author;
   img.src = imageAddress;
-  img.alt = `Image by ${author}`;
+  img.alt = `Image by ${author}, ${imageUrl}`;
   imgDiv.classList.remove("hide");
 };
 
